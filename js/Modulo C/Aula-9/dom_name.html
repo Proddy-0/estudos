@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciando estudos de DOM</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        background-color: rgba(25, 86, 253, 0.466);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;
+      }
+
+      h1 {
+        font-style: oblique;
+      }
+      strong{
+        color: rgb(255, 255, 255);
+      }
+    </style>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Esse é o paragrafo 1 <strong>ENTENDEU</strong></p>
+    <div name='msg'>Clique em mim</div>
+    <br />
+    <script>
+      var p1 = document.getElementsByName('msg');
+      p1.style.color = 'red'
+      
+      document.write(p1.innerHTML)
+      p1.innerText = 'Estou aguardando'
+      // usando o innet.Text ele pega os textos ja o innerHTML busca seus style juntos
+    </script>
+  </body>
+
+</html>
