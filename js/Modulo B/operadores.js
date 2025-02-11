@@ -20,6 +20,12 @@ salario > 1500 && sexo != `M`; // o salario é maior que 1500 E o sexo é difere
 
 media > 6 ? "Aprovado" : "Reprovado" // se a nota for maior ou igual a 6 resulta aprovado, caso contrario reprovado
 
+5 == '5';  // TRUE  converte string para número
+5 === '5'; // FALSE tipos diferentes
+
+true == 1;  // TRUE  1 é tratado como verdadeiro
+true === 1; // FALSE booleano ≠ número
+
 /*ORDEM DE PRECEDÊNCIA
 
     OPERADORES ARÍTIMETICOS
@@ -29,7 +35,7 @@ media > 6 ? "Aprovado" : "Reprovado" // se a nota for maior ou igual a 6 resulta
         4- + , -
     
     OPERADOES RELACIONAIS
-        1- < , > , <= , >=
+        1- < , > , <= , >= , == , === 
     
     OPERADORES LOGICOS
         1- !
