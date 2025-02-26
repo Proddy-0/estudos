@@ -1,0 +1,160 @@
+### **Curso de Python Explicativo com Desafios**
+
+Este curso abordará desde conceitos básicos até tópicos intermediários de Python, com desafios práticos para consolidar o aprendizado.  
+**Duração sugerida:** 6 semanas (2-3 horas/dia).
+
+---
+
+### **Módulo 1: Introdução ao Python**
+#### **Conteúdo Teórico**
+- O que é Python? Vantagens: sintaxe simples, versatilidade (web, dados, automação).
+- Instalação do Python e configuração do ambiente (VS Code, PyCharm, Jupyter).
+- Tipos de dados: `int`, `float`, `str`, `bool`, `list`, `dict`.
+- Operadores básicos e entrada/saída (`print()`, `input()`).
+
+#### **Desafio 1: Conversor de Temperatura**
+Crie um programa que converta Celsius para Fahrenheit.  
+**Fórmula:** `F = (C * 9/5) + 32`.  
+**Exemplo:**
+```python
+celsius = float(input("Temperatura em Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius}°C equivalem a {fahrenheit}°F")
+```
+
+---
+
+### **Módulo 2: Estruturas de Controle e Funções**
+#### **Conteúdo Teórico**
+- Condicionais: `if`, `elif`, `else`.
+- Loops: `for`, `while`, `break`, `continue`.
+- Funções: definição, parâmetros, retorno, escopo de variáveis.
+
+#### **Desafio 2: Jogo da Adivinhação**
+Crie um jogo onde o usuário tenta adivinhar um número entre 1 e 100.  
+- O programa informa se o palpite é maior ou menor que o número secreto.
+- Use `random.randint(1, 100)` para gerar o número aleatório.
+- Limite a 10 tentativas.
+
+**Exemplo:**
+```
+Tentativa 1: 50
+Dica: O número é menor!
+Tentativa 2: 25
+Dica: O número é maior!
+```
+
+---
+
+### **Módulo 3: Orientação a Objetos (OOP)**
+#### **Conteúdo Teórico**
+- Classes e objetos: atributos, métodos, construtor (`__init__`).
+- Herança, polimorfismo, encapsulamento.
+- Métodos especiais: `__str__`, `__repr__`.
+
+#### **Desafio 3: Sistema de Banco**
+Crie classes para modelar um sistema bancário:
+- Classe `ContaBancaria` com `numero`, `titular`, `saldo`.
+- Métodos: `depositar(valor)`, `sacar(valor)`, `exibir_saldo()`.
+- Classe `ContaPoupanca` que herda de `ContaBancaria` e adiciona `taxa_rendimento`.
+
+**Exemplo de uso:**
+```python
+conta = ContaPoupanca("123", "Maria", 1000, 0.05)
+conta.depositar(500)
+conta.sacar(200)
+print(conta.exibir_saldo())  # Saída: Saldo: R$1300.00
+```
+
+---
+
+### **Módulo 4: Manipulação de Arquivos e Exceções**
+#### **Conteúdo Teórico**
+- Leitura/escrita de arquivos: `open()`, `read()`, `write()`, `with`.
+- Tratamento de exceções: `try`, `except`, `finally`.
+- Módulos úteis: `os`, `json`.
+
+#### **Desafio 4: Agenda de Contatos**
+Crie uma agenda que:
+- Armazene contatos (nome, telefone, email) em um arquivo CSV ou JSON.
+- Permita adicionar, buscar e listar contatos.
+- Use exceções para lidar com arquivos inexistentes ou dados inválidos.
+
+**Exemplo de arquivo JSON:**
+```json
+[
+  {"nome": "Ana", "telefone": "11-99999-9999", "email": "ana@email.com"}
+]
+```
+
+---
+
+### **Módulo 5: Introdução a APIs e Web (Flask)**
+#### **Conteúdo Teórico**
+- Criação de APIs REST com Flask.
+- Rotas, métodos HTTP (GET, POST), e retorno de JSON.
+- Uso de `requests` para consumir APIs externas.
+
+#### **Desafio 5: API de Tarefas**
+Crie uma API simples com Flask:
+- Endpoints:
+  - `GET /tarefas`: Lista todas as tarefas.
+  - `POST /tarefas`: Adiciona uma nova tarefa (descrição e status).
+  - `PUT /tarefas/<id>`: Atualiza o status de uma tarefa.
+- Use uma lista em memória ou um arquivo JSON para persistência.
+
+**Exemplo de resposta:**
+```python
+from flask import Flask, jsonify, request
+app = Flask(__name__)
+
+tarefas = [
+    {"id": 1, "descricao": "Estudar Python", "concluida": False}
+]
+
+@app.route('/tarefas', methods=['GET'])
+def listar_tarefas():
+    return jsonify(tarefas)
+```
+
+---
+
+### **Módulo 6: Projeto Final**
+#### **Desafio 6: Sistema de Gerenciamento de Biblioteca**
+Crie um sistema completo com:
+1. **Backend (Flask):**
+   - API para cadastrar livros, clientes e empréstimos.
+   - Use SQLite ou SQLAlchemy para o banco de dados.
+2. **Frontend (HTML/CSS/JS ou CLI):**
+   - Interface para adicionar livros, registrar empréstimos e consultar disponibilidade.
+3. **Funcionalidades:**
+   - Validação de dados (ex: livro já emprestado).
+   - Relatório de livros mais populares.
+
+**Modelo do banco de dados:**
+```python
+class Livro(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    titulo = db.Column(db.String(100))
+    autor = db.Column(db.String(50))
+```
+
+---
+
+### **Recursos Adicionais**
+- **Documentação:** [Python Official Docs](https://docs.python.org/pt-br/3/), [Flask Documentation](https://flask.palletsprojects.com/).
+- **Livros Recomendados:**
+  - *"Python Crash Course"* (Eric Matthes).
+  - *"Automate the Boring Stuff with Python"* (Al Sweigart).
+- **Ferramentas:**
+  - **Ambiente Virtual:** `venv`, `pipenv`.
+  - **Pacotes Úteis:** `pandas` (dados), `requests` (APIs), `selenium` (automação).
+
+---
+
+### **Dicas para os Desafios**
+- Use list comprehensions e funções como `map()`/`filter()` para código mais limpo.
+- Pratique a formatação de strings com f-strings (ex: `f"Saldo: R${saldo:.2f}"`).
+- Escreva testes simples com `assert` ou `pytest` (opcional).
+
+**Bom aprendizado!** 🚀

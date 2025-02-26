@@ -1,0 +1,192 @@
+### **Curso de C++ Explicativo com Desafios**
+
+Este curso abordará desde conceitos básicos até tópicos intermediários de C++, com desafios práticos para consolidar o aprendizado.  
+**Duração sugerida:** 6 semanas (2-3 horas/dia).
+
+---
+
+### **Módulo 1: Introdução ao C++**
+#### **Conteúdo Teórico**
+
+- O que é C++? História e diferenças para C.
+
+- Características: Performance, orientação a objetos, baixo nível vs. alto nível.
+
+- Compiladores: GCC, Clang, MSVC.
+
+- Ferramentas: IDE (Code::Blocks, Visual Studio, VS Code) ou editores de texto.
+
+
+#### **Desafio 1: Configuração do Ambiente**
+1. Instale um compilador (ex: [MinGW](https://www.mingw-w64.org/) para Windows ou `g++` no Linux).
+
+2. Configure o VS Code com extensão C++ ou use uma IDE como Code::Blocks.
+
+3. Crie um programa que imprima `"Olá, Mundo!"`.
+
+4. Modifique o programa para exibir seu nome e idade usando `std::cout`.
+
+**Exemplo:**
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Olá, Maria! Você tem 25 anos.\n";
+    return 0;
+}
+```
+
+---
+
+### **Módulo 2: Fundamentos de C++**
+#### **Conteúdo Teórico**
+
+- Sintaxe básica: `std::cout`, `std::cin`, variáveis (`int`, `float`, `string` via `<string>`).
+
+- Estruturas de controle: `if`, `else`, `switch`, `for`, `while`.
+
+- Funções e passagem de parâmetros (por valor e por referência).
+
+
+#### **Desafio 2: Calculadora de IMC**
+
+Crie um programa que calcule o Índice de Massa Corporal (IMC) com base no peso e altura inseridos pelo usuário.
+Fórmula: `IMC = peso / (altura * altura)`.  
+Classificação:
+- Abaixo de 18.5: Magreza
+- 18.5–24.9: Saudável
+- 25.0–29.9: Sobrepeso
+- Acima de 30.0: Obesidade
+
+**Exemplo de Saída:**
+```
+Peso (kg): 70
+Altura (m): 1.75
+Seu IMC é 22.86 (Saudável).
+```
+
+---
+
+### **Módulo 3: Orientação a Objetos (OOP)**
+
+#### **Conteúdo Teórico**
+- Classes e objetos: membros públicos/privados, métodos, construtores/destrutores.
+
+- Herança, polimorfismo, encapsulamento.
+
+- Ponteiros e gerenciamento de memória (new/delete).
+
+
+#### **Desafio 3: Sistema de Veículos**
+Crie uma hierarquia de classes:
+
+- Classe base `Veiculo` com propriedades: `marca`, `ano`, `preco`.
+
+- Classes derivadas: `Carro` (número de portas) e `Moto` (cilindradas).
+
+- Crie um vetor de veículos e exiba suas informações usando polimorfismo.
+
+**Exemplo:**
+```cpp
+Carro carro("Toyota", 2020, 80000, 4);
+Moto moto("Honda", 2019, 15000, 300);
+
+// Saída:
+// Toyota (2020) - Preço: R$80000 - Portas: 4
+// Honda (2019) - Preço: R$15000 - Cilindradas: 300
+```
+
+---
+
+### **Módulo 4: Estruturas de Dados e Ponteiros**
+#### **Conteúdo Teórico**
+
+- Arrays vs. vetores (`std::vector`).
+
+- Ponteiros, referências e alocação dinâmica.
+
+- Estruturas de dados simples: listas encadeadas, pilhas.
+
+
+#### **Desafio 4: Gerenciador de Tarefas com Lista Encadeada**
+Implemente uma lista encadeada para armazenar tarefas com:
+
+- Descrição da tarefa.
+
+- Status (concluída/pendente).
+
+- Funcionalidades: adicionar, remover, marcar como concluída, listar todas.
+
+**Dica:** Use uma estrutura `struct No { string descricao; bool concluida; No* proximo; };`.
+
+---
+
+### **Módulo 5: Manipulação de Arquivos e Exceções**
+#### **Conteúdo Teórico**
+
+- Leitura/escrita de arquivos com `<fstream>`.
+
+- Tratamento de exceções (`try`, `catch`, `throw`).
+
+- Namespaces e organização de código.
+
+
+#### **Desafio 5: Agenda de Contatos**
+Crie um programa que gerencie contatos (nome, telefone, email) salvos em um arquivo `.txt`.
+
+Funcionalidades:
+- Adicionar contato.
+- Buscar contato por nome.
+- Carregar e salvar dados em arquivo.
+
+**Exemplo de arquivo:**
+```
+Maria; (11) 99999-9999; maria@email.com
+João; (21) 88888-8888; joao@email.com
+```
+
+---
+
+### **Módulo 6: Projeto Final**
+#### **Desafio 6: Jogo de Texto em C++**
+Crie um jogo de aventura baseado em texto com:
+
+1. **Sistema de Personagem:** Nome, saúde, inventário.
+
+2. **Mapa:** Navegação entre salas (ex: floresta, caverna).
+
+3. **Combate:** Inimigos com saúde e dano.
+
+4. **Salvamento:** Progresso salvo em arquivo binário.
+
+
+**Exemplo de Mecânica:**
+```
+Você está na floresta. O que faz?
+1. Atacar o lobo
+
+2. Fugir para a caverna
+
+3. Usar poção de cura
+
+```
+
+---
+
+### **Recursos Adicionais**
+- **Documentação:** [C++ Reference](https://en.cppreference.com/), [LearnCPP](https://www.learncpp.com/).
+
+- **Livros Recomendados:**
+  - *"A Linguagem de Programação C++"* (Bjarne Stroustrup).
+  - *"Effective Modern C++"* (Scott Meyers).
+  
+- **Comunidade:** Stack Overflow, Reddit (r/cpp), fóruns de desenvolvimento.
+
+---
+
+### **Dicas para os Desafios**
+- Use `Valgrind` ou ferramentas de debug para detectar vazamentos de memória.
+- Pratique a sintaxe moderna (C++11/17/20): `auto`, smart pointers (`std::unique_ptr`), loops baseados em intervalo.
+- Teste casos extremos (ex: arquivo inexistente no Desafio 5).
+
+**Bom aprendizado!** 🚀

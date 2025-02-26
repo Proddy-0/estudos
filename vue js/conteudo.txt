@@ -1,0 +1,179 @@
+### **Curso de Vue.js Explicativo com Desafios**
+
+Este curso abordará desde conceitos básicos até tópicos intermediários de Vue.js, com desafios práticos para consolidar o aprendizado.  
+**Duração sugerida:** 6 semanas (2-3 horas/dia).
+
+---
+
+### **Módulo 1: Introdução ao Vue.js**
+#### **Conteúdo Teórico**
+- O que é Vue.js? Reatividade, componentes e Virtual DOM.
+- Vue 2 vs. Vue 3: Composition API e melhorias de performance.
+- Ferramentas: Node.js, npm/yarn, Vue CLI ou Vite.
+- Estrutura de um projeto Vue: `App.vue`, componentes, pastas `src` e `public`.
+
+#### **Desafio 1: Configuração do Primeiro Projeto**
+1. Instale o Node.js e o npm.
+2. Crie um projeto com Vite:
+   ```bash
+   npm create vite@latest meu-app-vue -- --template vue
+   cd meu-app-vue
+   npm install
+   npm run dev
+   ```
+3. Modifique `App.vue` para exibir seu nome e uma mensagem estilizada com Tailwind CSS ou CSS puro.
+
+---
+
+### **Módulo 2: Diretivas e Reatividade**
+#### **Conteúdo Teórico**
+- Sintaxe de templates: `{{ }}`, `v-bind`, `v-model`.
+- Diretivas comuns: `v-if`, `v-for`, `v-on`.
+- Reatividade com `ref` e `reactive` (Composition API).
+
+#### **Desafio 2: Lista de Tarefas Simples**
+Crie um componente que:
+- Permita adicionar tarefas via input.
+- Exiba as tarefas em uma lista.
+- Permita marcar tarefas como concluídas (riscando o texto).
+- Use `v-for` e `v-model` para gerenciar o estado.
+
+**Exemplo:**  
+```vue
+<template>
+  <input v-model="novaTarefa" @keyup.enter="adicionarTarefa" />
+  <ul>
+    <li v-for="(tarefa, index) in tarefas" :key="index" :class="{ 'line-through': tarefa.concluida }">
+      {{ tarefa.texto }}
+    </li>
+  </ul>
+</template>
+```
+
+---
+
+### **Módulo 3: Componentes e Comunicação**
+#### **Conteúdo Teórico**
+- Criação de componentes `.vue` (template, script, style).
+- Passagem de dados via `props` e emissão de eventos com `emits`.
+- Slots para conteúdo dinâmico.
+
+#### **Desafio 3: Card de Produto Reutilizável**
+Crie um componente `ProductCard` que receba `nome`, `preco` e `imagem` via props.  
+- Exiba os dados em um card estilizado.
+- Adicione um botão "Comprar" que emita um evento `add-to-cart` com o produto.
+
+**Exemplo de uso:**  
+```vue
+<ProductCard 
+  nome="Camiseta Vue.js" 
+  preco="99.90" 
+  imagem="camiseta.jpg" 
+  @add-to-cart="handleAddToCart" 
+/>
+```
+
+---
+
+### **Módulo 4: Roteamento (Vue Router)**
+#### **Conteúdo Teórico**
+- Configuração do Vue Router (`createRouter`, `createWebHistory`).
+- Navegação com `<router-link>` e `useRouter`.
+- Rotas dinâmicas e parâmetros (`useRoute`).
+
+#### **Desafio 4: Blog com Detalhes**
+Crie um blog com:
+- Página inicial listando posts (título e resumo).
+- Página `/post/:id` exibindo o conteúdo completo do post.
+- Dados mockados em um array ou arquivo JSON.
+
+**Exemplo de rota:**  
+```javascript
+const routes = [
+  { path: '/', component: Home },
+  { path: '/post/:id', component: PostDetail }
+];
+```
+
+---
+
+### **Módulo 5: Gerenciamento de Estado (Pinia)**
+#### **Conteúdo Teórico**
+- Introdução ao Pinia (store, actions, getters).
+- Diferenças entre Pinia e Vuex.
+- Integração com Composition API.
+
+#### **Desafio 5: Carrinho de Compras Global**
+Crie uma store Pinia para gerenciar um carrinho de compras:
+- Armazene itens adicionados.
+- Calcule o total.
+- Permita aumentar/diminuir quantidades.
+
+**Exemplo de store:**  
+```javascript
+// stores/cart.js
+export const useCartStore = defineStore('cart', {
+  state: () => ({
+    items: []
+  }),
+  actions: {
+    addItem(product) {
+      // Lógica para adicionar item
+    }
+  }
+});
+```
+
+---
+
+### **Módulo 6: Integração com APIs (Axios)**
+#### **Conteúdo Teórico**
+- Requisições HTTP com Axios.
+- Hooks de ciclo de vida (`onMounted`).
+- Tratamento de loading e erros.
+
+#### **Desafio 6: Buscador de Filmes**
+Crie uma aplicação que busque filmes pela API do OMDB (https://www.omdbapi.com/):
+- Use um input para buscar por título.
+- Exiba resultados em cards com poster, título e ano.
+- Gerencie estados de loading e erro.
+
+**Endpoint:**  
+```
+http://www.omdbapi.com/?apikey=SUA_CHAVE&s=TERMO_DA_BUSCA
+```
+
+---
+
+### **Módulo 7: Projeto Final**
+#### **Desafio 7: Plataforma de E-learning**
+Crie uma plataforma de cursos online com:
+1. **Autenticação:** Login/registro (pode ser mockado ou com Firebase).
+2. **Catálogo de Cursos:** Cards com título, descrição e preço.
+3. **Carrinho e Checkout:** Integração com a store Pinia.
+4. **Dashboard do Aluno:** Acompanhamento de cursos matriculados.
+5. **Tecnologias:**
+   - Vue Router para navegação.
+   - Pinia para estado global.
+   - Tailwind CSS para estilização.
+   - API fake (JSON Server) ou Firebase.
+
+---
+
+### **Recursos Adicionais**
+- **Documentação Oficial:** [Vue.js Docs](https://vuejs.org/), [Pinia Docs](https://pinia.vuejs.org/).
+- **Cursos Recomendados:**
+  - [Vue Mastery](https://www.vuemastery.com/).
+  - "The Vue.js 3 Masterclass" (Udemy).
+- **Ferramentas:**
+  - **Debugging:** Vue DevTools.
+  - **Deploy:** Vercel, Netlify.
+
+---
+
+### **Dicas para os Desafios**
+- Use a extensão **Volar** no VS Code para melhor suporte ao Vue 3.
+- Separe componentes em pastas organizadas (ex: `components/ui/Button.vue`).
+- Pratique a reatividade: evite mutações diretas fora de `ref`/`reactive`.
+
+**Bom aprendizado!** 🚀

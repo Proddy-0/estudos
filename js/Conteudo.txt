@@ -1,0 +1,153 @@
+### **Curso de JavaScript Explicativo com Desafios**
+
+Este curso abordará desde conceitos básicos até tópicos intermediários de JavaScript, com desafios práticos para consolidar o aprendizado.  
+**Duração sugerida:** 6 semanas (2-3 horas/dia).
+
+---
+
+### **Módulo 1: Introdução ao JavaScript**
+#### **Conteúdo Teórico**
+- O que é JavaScript? Execução no navegador vs. Node.js.
+- Variáveis (`let`, `const`, `var`), tipos de dados (`string`, `number`, `boolean`, `object`).
+- Funções básicas: `console.log()`, `alert()`, `prompt()`.
+- Operadores e estruturas de controle (`if`, `else`, `for`, `while`).
+
+#### **Desafio 1: Configuração do Ambiente**
+1. Instale o [Node.js](https://nodejs.org/).
+2. Use o VS Code com a extensão **JavaScript (ES6)**.
+3. Crie um arquivo `hello.js` e execute-o via terminal:
+   ```javascript
+   console.log("Olá, Mundo!");
+   ```
+4. Modifique o código para exibir seu nome e hobby:
+   ```javascript
+   console.log("Meu nome é João e adoro programar!");
+   ```
+
+---
+
+### **Módulo 2: Funções e Escopo**
+#### **Conteúdo Teórico**
+- Declaração de funções (`function`, arrow functions).
+- Escopo global vs. escopo de bloco (`let` vs. `var`).
+- Callbacks e closures.
+- Hoisting e temporização.
+
+#### **Desafio 2: Gerenciador de Tarefas**
+Crie um programa que gerencie tarefas:
+- Use um array para armazenar tarefas.
+- Funções:
+  - `adicionarTarefa(descricao)`: Adiciona uma tarefa.
+  - `removerTarefa(indice)`: Remove uma tarefa pelo índice.
+  - `listarTarefas()`: Exibe todas as tarefas.
+
+**Exemplo:**
+```javascript
+adicionarTarefa("Estudar JavaScript");
+adicionarTarefa("Fazer exercícios");
+listarTarefas(); // ["Estudar JavaScript", "Fazer exercícios"]
+```
+
+---
+
+### **Módulo 3: Manipulação do DOM**
+#### **Conteúdo Teórico**
+- Seleção de elementos: `document.querySelector()`, `getElementById`.
+- Eventos: `addEventListener`, `click`, `input`.
+- Modificação dinâmica de HTML/CSS via JavaScript.
+
+#### **Desafio 3: Contador Interativo**
+Crie uma página HTML com:
+- Um número exibido (inicialmente 0).
+- Botões "Incrementar" e "Decrementar".
+- Atualize o número conforme os botões são clicados.
+
+**Exemplo de HTML:**
+```html
+<h1 id="contador">0</h1>
+<button id="incrementar">+</button>
+<button id="decrementar">-</button>
+```
+
+---
+
+### **Módulo 4: Assincronicidade e APIs**
+#### **Conteúdo Teórico**
+- Promises e `async/await`.
+- Fetch API para requisições HTTP.
+- Tratamento de erros com `try/catch`.
+- JSON e consumo de dados externos.
+
+#### **Desafio 4: Clima Tempo com API**
+Crie uma aplicação que busque o clima de uma cidade usando a [OpenWeather API](https://openweathermap.org/api):
+1. Peça ao usuário para inserir uma cidade.
+2. Faça uma requisição à API e exiba temperatura, descrição e umidade.
+3. Use `fetch` e manipulação de JSON.
+
+**Exemplo de Saída:**
+```
+Cidade: São Paulo
+Temperatura: 22°C
+Clima: Nublado
+Umidade: 65%
+```
+
+---
+
+### **Módulo 5: ES6+ e Modern JavaScript**
+#### **Conteúdo Teórico**
+- Arrow functions, template strings.
+- Desestruturação, spread/rest operator.
+- Classes e módulos (`import/export`).
+- LocalStorage para armazenamento local.
+
+#### **Desafio 5: Carrinho de Compras**
+Crie um sistema de carrinho de compas com:
+- Adição/remoção de produtos.
+- Cálculo do total.
+- Persistência de dados no LocalStorage.
+
+**Exemplo de Produto:**
+```javascript
+{
+  id: 1,
+  nome: "Camiseta",
+  preco: 49.90,
+  quantidade: 2
+}
+```
+
+---
+
+### **Módulo 6: Projeto Final**
+#### **Desafio 6: Aplicação Full-Stack (Node.js + Frontend)**
+Crie uma aplicação de lista de tarefas completa:
+1. **Backend (Node.js/Express):**
+   - API com endpoints para CRUD de tarefas.
+   - Use um banco de dados simples (ex: JSON ou SQLite).
+2. **Frontend (HTML/CSS/JS):**
+   - Interface para adicionar, editar e marcar tarefas como concluídas.
+   - Integração com a API via `fetch`.
+3. **Recursos Extras:**
+   - Autenticação de usuário (opcional).
+   - Deploy no Heroku ou Vercel.
+
+---
+
+### **Recursos Adicionais**
+- **Documentação:** [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript), [JavaScript.info](https://javascript.info/).
+- **Cursos Recomendados:**
+  - [freeCodeCamp - JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
+  - "Eloquent JavaScript" (livro gratuito online).
+- **Ferramentas:**
+  - **Debugging:** Chrome DevTools, `console.table()`.
+  - **Pacotes:** NPM, Yarn.
+
+---
+
+### **Dicas para os Desafios**
+- Use `console.log()` para depurar e entender o fluxo de dados.
+- Pratique a imutabilidade (ex: usar `map`, `filter`, `reduce`).
+- Teste edge cases (ex: entrada vazia no Desafio 4).
+
+**Bom aprendizado!** 🚀

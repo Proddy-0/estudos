@@ -1,0 +1,158 @@
+### **Curso de React Explicativo com Desafios**
+
+Este curso abordará desde conceitos básicos até tópicos intermediários de React, com desafios práticos para consolidar o aprendizado.  
+**Duração sugerida:** 6 semanas (2-3 horas/dia).
+
+---
+
+### **Módulo 1: Introdução ao React**
+#### **Conteúdo Teórico**
+- O que é React? Componentes, JSX e Virtual DOM.
+- React vs. React Native vs. React DOM.
+- Ferramentas: Node.js, npm/yarn, Vite ou Create React App (CRA).
+- Estrutura de um projeto React: `App.jsx`, `index.js`, pastas `components` e `public`.
+
+#### **Desafio 1: Configuração do Primeiro Projeto**
+1. Instale o Node.js e o npm.
+2. Crie um projeto com Vite:
+   ```bash
+   npm create vite@latest meu-app-react -- --template react
+   cd meu-app-react
+   npm install
+   npm run dev
+   ```
+3. Modifique o componente `App.jsx` para exibir seu nome e uma mensagem de boas-vindas.
+
+---
+
+### **Módulo 2: Componentes e Props**
+#### **Conteúdo Teórico**
+- Componentes funcionais vs. de classe.
+- Props: passagem de dados entre componentes.
+- Renderização condicional e listas (`map`).
+
+#### **Desafio 2: Lista de Usuários**
+Crie um componente `UserList` que receba um array de usuários (nome, idade) via props e os exiba em uma lista estilizada.  
+**Exemplo de uso:**
+```jsx
+<UserList users={[
+  { nome: "Ana", idade: 25 },
+  { nome: "Pedro", idade: 30 }
+]} />
+```
+
+---
+
+### **Módulo 3: Estado (useState e useEffect)**
+#### **Conteúdo Teórico**
+- Gerenciamento de estado com `useState`.
+- Ciclo de vida com `useEffect` (montagem, atualização, desmontagem).
+- Atualizações assíncronas e dependências.
+
+#### **Desafio 3: Contador com Histórico**
+Crie um contador que:
+- Permita incrementar/decrementar.
+- Armazene o histórico de valores em um array (ex: [0, 1, 2, 1]).
+- Exiba o histórico abaixo do contador.
+
+**Dica:** Use `useState` para o valor atual e o histórico.
+
+---
+
+### **Módulo 4: Roteamento (React Router)**
+#### **Conteúdo Teórico**
+- Configuração do React Router (`BrowserRouter`, `Routes`, `Route`).
+- Navegação com `Link` e `useNavigate`.
+- Parâmetros de URL (`useParams`).
+
+#### **Desafio 4: Blog Simples**
+Crie um blog com:
+- Página inicial listando posts (título e resumo).
+- Página de detalhes do post (acessada via `/posts/:id`).
+- Dados mockados em um array de objetos.
+
+**Exemplo de Post:**
+```javascript
+{
+  id: 1,
+  titulo: "Primeiro Post",
+  conteudo: "Lorem ipsum...",
+  data: "2024-01-01"
+}
+```
+
+---
+
+### **Módulo 5: Gerenciamento de Estado Global (Context API)**
+#### **Conteúdo Teórico**
+- Problemas com prop drilling.
+- Criação de contextos (`createContext`, `Provider`).
+- Consumo de contextos com `useContext`.
+
+#### **Desafio 5: Carrinho de Compras**
+Implemente um carrinho de compras global:
+- Use `Context API` para armazenar itens do carrinho.
+- Permita adicionar/remover produtos.
+- Exiba o total de itens no header.
+
+**Exemplo de Produto:**
+```javascript
+{
+  id: 1,
+  nome: "Livro React",
+  preco: 99.90,
+  quantidade: 1
+}
+```
+
+---
+
+### **Módulo 6: Integração com APIs (Axios e Custom Hooks)**
+#### **Conteúdo Teórico**
+- Requisições HTTP com Axios.
+- Custom hooks (ex: `useFetch`).
+- Tratamento de loading e erros.
+
+#### **Desafio 6: Buscador de Repositórios do GitHub**
+Crie uma aplicação que:
+- Busque repositórios de um usuário do GitHub via API.
+- Exiba nome, descrição e número de estrelas.
+- Use um custom hook para encapsular a lógica de fetch.
+
+**Endpoint:** `GET https://api.github.com/users/{username}/repos`.
+
+---
+
+### **Módulo 7: Projeto Final**
+#### **Desafio 7: Rede Social Minimalista**
+Crie uma rede social com:
+1. **Autenticação:** Login/registro (mockado ou com Firebase).
+2. **Feed:** Postagens de usuários (texto e imagem).
+3. **Interações:** Curtir e comentar.
+4. **Perfil:** Edição de dados do usuário.
+5. **Tecnologias:**
+  - React Router para navegação.
+  - Context API ou Redux Toolkit para estado global.
+  - Estilização com CSS Modules ou Tailwind CSS.
+  - Persistência de dados em localStorage ou API externa.
+
+---
+
+### **Recursos Adicionais**
+- **Documentação Oficial:** [React Docs](https://react.dev/).
+- **Cursos Recomendados:**
+  - "The Road to React" (livro por Robin Wieruch).
+  - Curso gratuito [Scrimba - Learn React](https://scrimba.com/learn/learnreact).
+- **Ferramentas:**
+  - **Estado Global:** Redux Toolkit, Zustand.
+  - **Estilização:** Styled Components, Material-UI.
+  - **Deploy:** Vercel, Netlify.
+
+---
+
+### **Dicas para os Desafios**
+- Use o React Developer Tools para depurar estados e props.
+- Separe componentes em arquivos reutilizáveis (ex: `Button.jsx`, `Card.jsx`).
+- Pratique a componentização: "Um componente, uma responsabilidade".
+
+**Bom aprendizado!** 🚀

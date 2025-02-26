@@ -1,0 +1,183 @@
+### **Curso de .NET Explicativo com Desafios**
+
+Este curso abordará desde conceitos básicos até tópicos intermediários de .NET (C# e ASP.NET Core), com desafios práticos para consolidar o aprendizado.  
+**Duração sugerida:** 6 semanas (2-3 horas/dia).
+---
+
+
+### **Módulo 1: Introdução ao .NET**
+#### **Conteúdo Teórico**
+- O que é .NET? (Framework vs. .NET Core vs. .NET 5+)
+
+- CLR (Common Language Runtime) e IL (Intermediate Language)
+
+- Linguagens suportadas (C#, F#, VB.NET)
+
+- Vantagens: Cross-platform, performance, open-source.
+
+
+#### **Desafio 1: Configuração do Ambiente**
+
+1. Instale o [.NET SDK](https://dotnet.microsoft.com/download).
+
+2. Instale o [Visual Studio](https://visualstudio.microsoft.com/) ou [VS Code](https://code.visualstudio.com/).
+
+3. Execute no terminal:
+   ```bash
+   dotnet new console -o MeuPrimeiroApp
+   cd MeuPrimeiroApp
+   dotnet run
+   ```
+
+4. Modifique o programa para exibir "Olá, [seu nome]!".
+
+
+---
+
+
+### **Módulo 2: Fundamentos de C#**
+#### **Conteúdo Teórico**
+
+- Sintaxe básica: `Console.WriteLine`, variáveis, tipos de dados (`int`, `string`, `bool`).
+
+- Estruturas de controle: `if`, `else`, `for`, `while`.
+
+- Métodos e parâmetros.
+
+
+#### **Desafio 2: Calculadora Simples**
+
+Crie um programa que pergunte dois números e uma operação (+, -, *, /) e retorne o resultado.  
+**Exemplo:**
+```
+Número 1: 5
+Número 2: 3
+Operação: +
+Resultado: 8
+```
+
+---
+
+### **Módulo 3: Orientação a Objetos (OOP)**
+#### **Conteúdo Teórico**
+
+- Classes e objetos.
+
+- Herança, encapsulamento, polimorfismo.
+
+- Propriedades, construtores.
+
+
+#### **Desafio 3: Sistema de Biblioteca**
+
+
+Crie uma classe `Livro` com propriedades `Titulo`, `Autor` e `AnoPublicacao`.  
+- Crie uma classe `Biblioteca` que armazene livros em uma lista.
+
+- Adicione métodos para `AdicionarLivro`, `RemoverLivro` e `ListarLivros`.
+
+**Exemplo de uso:**
+
+```csharp
+var livro1 = new Livro("1984", "George Orwell", 1949);
+var biblioteca = new Biblioteca();
+biblioteca.AdicionarLivro(livro1);
+biblioteca.ListarLivros(); // Exibe todos os livros
+```
+
+---
+
+### **Módulo 4: ASP.NET Core (Web API)**
+#### **Conteúdo Teórico**
+
+- Introdução a APIs REST.
+
+- Configuração de um projeto ASP.NET Core.
+
+- Rotas, controladores (Controllers), e métodos HTTP (GET, POST).
+
+#### **Desafio 4: API de Tarefas**
+Crie uma API para gerenciar tarefas:
+
+1. Crie um modelo `Tarefa` com `Id`, `Descricao` e `Concluida`.
+
+
+2. Crie um controller `TarefasController` com endpoints:
+
+   - `GET /tarefas`: Retorna todas as tarefas.
+
+   - `POST /tarefas`: Cria uma nova tarefa.
+
+   - `PUT /tarefas/{id}`: Marca uma tarefa como concluída.
+
+**Dica:** Use uma lista em memória para armazenar as tarefas.
+
+---
+
+### **Módulo 5: Entity Framework Core (Banco de Dados)**
+#### **Conteúdo Teórico**
+
+- ORM (Mapeamento Objeto-Relacional).
+
+- Configuração do DbContext.
+
+- Migrações e CRUD.
+
+
+
+#### **Desafio 5: Sistema de Usuários**
+
+1. Crie uma classe `Usuario` com `Id`, `Nome`, `Email`.
+
+2. Configure um `DbContext` e use o SQLite como banco de dados.
+
+3. Implemente operações:
+   - Adicionar usuário.
+
+   - Buscar usuário por email.
+
+   - Listar todos os usuários.
+
+---
+
+### **Módulo 6: Projeto Final**
+#### **Desafio 6: Aplicação Completa**
+
+Crie um sistema de e-commerce simples com:
+1. **Frontend:** Interface web (HTML/CSS/JavaScript ou Blazor).
+
+2. **Backend:** API ASP.NET Core com endpoints para produtos e pedidos.
+
+3. **Banco de Dados:** Entity Framework Core (SQL Server ou SQLite).
+
+4. **Requisitos:**
+   - Cadastro de produtos (Nome, Preço, Estoque).
+
+   - Cadastro de pedidos (Cliente, Produtos, Total).
+
+   - Atualização de estoque após um pedido.
+
+
+---
+
+### **Recursos Adicionais**
+- **Documentação Oficial:** [Microsoft Learn .NET](https://learn.microsoft.com/pt-br/dotnet/)
+
+- **Cursos Recomendados:** 
+
+  - "C# Fundamentals" no Pluralsight.
+
+  - "ASP.NET Core for Beginners" no YouTube.
+
+- **Comunidade:** Stack Overflow, GitHub, fóruns da Microsoft.
+
+---
+
+### **Dicas para os Desafios**
+- Sempre teste seu código com casos extremos (ex: divisão por zero no Desafio 2).
+
+- Use o debugger do Visual Studio para identificar erros.
+
+- Pratique a leitura de documentação oficial.
+
+**Bom aprendizado!** 🚀
