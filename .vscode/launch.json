@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/est-aysllan.magalhae/GitHub/estudos_js/C++/Hello Word",
-      "program": "c:/Users/est-aysllan.magalhae/GitHub/estudos_js/C++/Hello Word/build/Debug/outDebug",
+      "cwd": "c:/Users/est-aysllan.magalhae/GitHub/estudos_js/C++/calculadora_de_imc",
+      "program": "c:/Users/est-aysllan.magalhae/GitHub/estudos_js/C++/calculadora_de_imc/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

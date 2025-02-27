@@ -56,5 +56,10 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "files.associations": {
+    "*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "calculador_de_imc": "cpp"
+  }
 }
