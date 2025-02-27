@@ -6,7 +6,7 @@ Este curso abordará desde conceitos básicos até tópicos intermediários de .
 
 
 ### **Módulo 1: Introdução ao .NET**
-#### **Conteúdo Teórico**
+#### **Conteúdo Teórico**'
 - O que é .NET? (Framework vs. .NET Core vs. .NET 5+)
 
 - CLR (Common Language Runtime) e IL (Intermediate Language)
