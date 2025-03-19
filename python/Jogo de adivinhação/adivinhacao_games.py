@@ -1,7 +1,7 @@
 import random
 
 a = int(input("Digite um número: "))
-b = random.randint(1, 100)
+b = random.randint(1, 10)
 
 while a != b:
     if a > b:
